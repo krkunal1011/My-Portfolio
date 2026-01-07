@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my **personal portfolio website built to showcase my skills, projects, and experience as a **Full Stack Developer**. The portfolio is designed with a clean UI, smooth animations, and responsive layout to create a strong first impression for recruiters and hiring managers.
+This is my personal portfolio website built to showcase my skills, projects, and experience as a **Full Stack Developer**. The portfolio is designed with a clean UI, smooth animations, and responsive layout to create a strong first impression for recruiters and hiring managers.
 
 This project reflects my hands-on experience with modern web technologies and my ability to design, build, and deploy a complete frontend-focused application.
 
