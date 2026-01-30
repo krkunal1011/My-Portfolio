@@ -1,0 +1,111 @@
+import pandas as pd
+import docx
+from docx.shared import Pt
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+
+# 1. Load Data
+# Ensure the filename matches your downloaded file
+file_path = "Copy of Questions for Worksheets _ New Lakshyas.xlsx - R2 Grade 2 - All.csv"
+df = pd.read_csv(file_path, header=3)
+
+# Helper function to clean data
+def extract_section(df, col_indices, col_names, required_col):
+    section = df.iloc[1:, col_indices].copy()
+    section.columns = col_names
+    # Remove empty rows
+    return section.dropna(subset=[required_col]).reset_index(drop=True)
+
+# 2. Extract Sections
+# Hindi Passage (1-400)
+df_passage = extract_section(df, [1, 2, 3, 4, 5, 6, 7], 
+                             ['Pass_ID', 'Passage', 'Q_ID', 'Question', 'Opt1', 'Opt2', 'Opt3'], 'Passage')
+# Writing (1-100)
+df_writing = extract_section(df, [10, 11], ['Set_ID', 'Sentences'], 'Sentences')
+# Math Knowledge (1-100)
+df_math_know = extract_section(df, [13, 14, 15, 16], ['Set_ID', 'Q1', 'Q2', 'Q3'], 'Q1')
+# Math Operations (1-150)
+df_math_ops = extract_section(df, [18, 19, 20, 21, 22], ['Set_ID', 'Q1', 'Q2', 'Q3', 'Q4'], 'Q1')
+
+# 3. Prepare Consolidated Data
+rows_list = []
+total_worksheets = len(df_passage) # 400
+
+for i in range(total_worksheets):
+    # Loop through shorter sections using modulo (%)
+    pass_row = df_passage.iloc[i]
+    write_row = df_writing.iloc[i % len(df_writing)]
+    know_row = df_math_know.iloc[i % len(df_math_know)]
+    ops_row = df_math_ops.iloc[i % len(df_math_ops)]
+    
+    row_data = {
+        'Worksheet_ID': i + 1,
+        'Passage': pass_row['Passage'],
+        'Question': pass_row['Question'],
+        'Option_A': pass_row['Opt1'],
+        'Option_B': pass_row['Opt2'],
+        'Option_C': pass_row['Opt3'],
+        'Dictation': write_row['Sentences'],
+        'Math_Concept_1': know_row['Q1'],
+        'Math_Concept_2': know_row['Q2'],
+        'Math_Concept_3': know_row['Q3'],
+        'Math_Op_1': ops_row['Q1'],
+        'Math_Op_2': ops_row['Q2'],
+        'Math_Op_3': ops_row['Q3'],
+        'Math_Op_4': ops_row['Q4']
+    }
+    rows_list.append(row_data)
+
+# 4. Generate Excel File
+df_export = pd.DataFrame(rows_list)
+df_export.to_excel("Grade_2_Worksheets.xlsx", index=False)
+print("Generated Excel file: Grade_2_Worksheets.xlsx")
+
+# 5. Generate Word Document (Printable)
+doc = docx.Document()
+style = doc.styles['Normal']
+style.font.name = 'Arial'
+style.font.size = Pt(11)
+
+for i in range(total_worksheets):
+    row = df_export.iloc[i]
+    
+    # Header
+    heading = doc.add_heading(f"WORKSHEET {row['Worksheet_ID']}", 0)
+    heading.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    
+    # Hindi Section
+    doc.add_heading('HINDI SECTION', level=2)
+    p = doc.add_paragraph()
+    p.add_run("Passage:\n").bold = True
+    p.add_run(str(row['Passage']))
+    
+    p = doc.add_paragraph()
+    p.add_run("Q: ").bold = True
+    p.add_run(str(row['Question']) + "\n")
+    p.add_run(f"   (a) {row['Option_A']}\n")
+    p.add_run(f"   (b) {row['Option_B']}\n")
+    p.add_run(f"   (c) {row['Option_C']}")
+    
+    # Writing Section
+    doc.add_heading('WRITING (DICTATION)', level=2)
+    doc.add_paragraph(str(row['Dictation']))
+    
+    # Math Section
+    doc.add_heading('MATH SECTION', level=2)
+    
+    doc.add_heading('Knowledge & Concepts:', level=3)
+    doc.add_paragraph(f"1. {row['Math_Concept_1']}")
+    doc.add_paragraph(f"2. {row['Math_Concept_2']}")
+    doc.add_paragraph(f"3. {row['Math_Concept_3']}")
+    
+    doc.add_heading('Operations:', level=3)
+    doc.add_paragraph(f"1. {row['Math_Op_1']}")
+    doc.add_paragraph(f"2. {row['Math_Op_2']}")
+    doc.add_paragraph(f"3. {row['Math_Op_3']}")
+    doc.add_paragraph(f"4. {row['Math_Op_4']}")
+    
+    # Page Break for next worksheet
+    doc.add_page_break()
+
+doc.save("Grade_2_Worksheets_Printable.docx")
+print("Generated Word file: Grade_2_Worksheets_Printable.docx")
