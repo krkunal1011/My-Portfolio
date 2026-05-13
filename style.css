@@ -329,6 +329,59 @@ header::before {
   -webkit-text-fill-color: transparent;
 }
 
+
+/* ===== EXPERIENCE ===== */
+.experience { padding: 5rem 0; }
+.experience__container { max-width: 800px; margin: 0 auto; }
+
+.experience__card {
+  background: rgba(255, 255, 255, 0.05);   /* dark glass card */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  color: #e5e7eb;                           /* light text */
+}
+
+.experience__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.experience__header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.experience__company {
+  color: #818cf8;   /* accent — swap to match your site's accent color */
+  font-weight: 500;
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.experience__date {
+  font-size: 0.82rem;
+  color: #9ca3af;
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.experience__list {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.experience__list li {
+  margin-bottom: 0.55rem;
+  line-height: 1.65;
+  color: #d1d5db;
+}
 /* 7. PROJECT SECTION*/
 .project__grid {
   display: grid;
