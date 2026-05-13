@@ -16,6 +16,7 @@
         <div class="nav__pill">
             <a href="#home" class="active" data-tooltip="Home"><i class="ri-home-5-line"></i></a>
             <a href="#about" data-tooltip="About"><i class="ri-user-line"></i></a>
+            <a href="#experience" data-tooltip="Experience"><i class="ri-briefcase-line"></i></a>
             <a href="#tech" data-tooltip="Tech Stack"><i class="ri-code-s-slash-line"></i></a>
             <a href="#projects" data-tooltip="Projects"><i class="ri-briefcase-4-line"></i></a>
             <a href="#contact" data-tooltip="Contact"><i class="ri-mail-line"></i></a>
@@ -27,12 +28,12 @@
     <header id="home">
         <div class="section__container header__container">
             <div class="header__badge">
-                Learning. Building. Improving.
+                Building AI. Shipping Products. Growing Fast.
             </div>
-            <h1>Engineered For Performence<br />Designed For Impact</h1>
+            <h1>Engineered For Performance<br />Designed For Impact</h1>
             <p>
-                Hey, I'm <span>Kunal Kumar</span>, a Software Developer passionate about
-                building performant, user-friendly, and scalable applications.
+                Hey, I'm <span>Kunal Kumar</span>, an AI-focused Python Developer passionate about
+                building production-grade AI systems, RAG pipelines, and scalable full-stack applications.
             </p>
             <div class="action__btns">
                 <a href="#contact"><button class="btn btn__outline">Let's Connect</button></a>
@@ -50,12 +51,34 @@
             </div>
             <div class="about__content">
                 <h2 class="section__title">About <span>Me</span></h2>
-                <p class="section__subtitle">Software Engineer & Full Stack Developer</p>
+                <p class="section__subtitle">AI Developer & Full Stack Engineer</p>
                 <p class="about__details">
-                    I’m a software developer focused on building clean, functional web applications using modern
-                    MERN stack technologies. I bridge the gap between backend logic and intuitive user interfaces, solving real-world problems through structured code, efficient algorithms, and continuous hands-on learning. I am actively looking to apply my full-stack skills in a challenging industry environment.
+                    I'm an AI-focused Python developer and CS undergraduate with hands-on experience building production-grade AI systems — including RAG pipelines, multimodal LLM integrations, and semantic search engines. Proficient in Python, FastAPI, and the full GenAI stack (Gemini 1.5, sentence-transformers, vector databases). I bridge intelligent backends with clean, intuitive frontends and am actively looking to apply my skills in a challenging real-world environment.
                 </p>
                 <button class="btn">More About</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section class="experience" id="experience">
+        <div class="section__container experience__container">
+            <p class="section__subtitle">Work History</p>
+            <h2 class="section__title">Experience</h2>
+
+            <div class="experience__card">
+                <div class="experience__header">
+                    <div>
+                        <h3>Web Developer Intern</h3>
+                        <p class="experience__company">Atechnocrat Web Solutions Pvt. Ltd., New Delhi</p>
+                    </div>
+                    <span class="experience__date">Jan 2026 – May 2026 &nbsp;|&nbsp; 4 Months</span>
+                </div>
+                <ul class="experience__list">
+                    <li>Contributed to server-side logic and API integrations on back-end development tasks.</li>
+                    <li>Performed open-source customizations, adapting third-party tools to fit project requirements.</li>
+                    <li>Generated structured data summaries and internal reporting outputs.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -67,12 +90,8 @@
 
             <div class="techstack__grid">
                 <div class="techstack__card">
-                    <i class="ri-html5-line"></i>
-                    <h4>HTML5</h4>
-                </div>
-                <div class="techstack__card">
-                    <i class="ri-css3-line"></i>
-                    <h4>CSS3</h4>
+                    <i class="ri-code-box-line"></i>
+                    <h4>Python</h4>
                 </div>
                 <div class="techstack__card">
                     <i class="ri-javascript-line"></i>
@@ -80,15 +99,35 @@
                 </div>
                 <div class="techstack__card">
                     <i class="ri-reactjs-line"></i>
-                    <h4>React JS</h4>
+                    <h4>React / Next.js</h4>
+                </div>
+                <div class="techstack__card">
+                    <i class="ri-server-line"></i>
+                    <h4>FastAPI</h4>
                 </div>
                 <div class="techstack__card">
                     <i class="ri-nodejs-line"></i>
                     <h4>Node.js</h4>
                 </div>
                 <div class="techstack__card">
+                    <i class="ri-robot-2-line"></i>
+                    <h4>Gemini 1.5 LLM</h4>
+                </div>
+                <div class="techstack__card">
+                    <i class="ri-brain-line"></i>
+                    <h4>RAG Pipelines</h4>
+                </div>
+                <div class="techstack__card">
                     <i class="ri-database-2-line"></i>
-                    <h4>SQL / Mongo</h4>
+                    <h4>Vector DB / MongoDB</h4>
+                </div>
+                <div class="techstack__card">
+                    <i class="ri-css3-line"></i>
+                    <h4>Tailwind CSS</h4>
+                </div>
+                <div class="techstack__card">
+                    <i class="ri-docker-line"></i>
+                    <h4>Docker</h4>
                 </div>
                 <div class="techstack__card">
                     <i class="ri-git-merge-line"></i>
@@ -97,14 +136,6 @@
                 <div class="techstack__card">
                     <i class="ri-java-line"></i>
                     <h4>Java</h4>
-                </div>
-                <div class="techstack__card">
-                    <i class="ri-github-fill"></i>
-                    <h4>GitHub</h4>
-                </div>
-                <div class="techstack__card">
-                    <i class="ri-code-box-line"></i>
-                    <h4>Python</h4>
                 </div>
             </div>
         </div>
@@ -117,68 +148,86 @@
 
             <div class="project__grid">
                 <div class="project__card">
+                    <a href="https://github.com/krkunal1011" target="_blank" class="project__link">
+                        <img src="assets/project-1.png" alt="COGNIFI AI Expense Dashboard" />
+                        <div class="overlay"><i class="ri-arrow-right-up-line"></i></div>
+                    </a>
+                    <div class="project__content">
+                        <h4>COGNIFI – AI Expense Dashboard</h4>
+                        <p>Full-stack financial SaaS with dual-backend (Django + FastAPI), Gemini 1.5 multimodal AI assistant, JWT auth, and Glassmorphism UI with drag-and-drop receipt scanning.</p>
+                        <div class="project__tags">
+                            <span>Next.js</span><span>Django</span><span>FastAPI</span><span>Gemini 1.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project__card">
+                    <a href="https://github.com/krkunal1011" target="_blank" class="project__link">
+                        <img src="assets/project-2.png" alt="VIBECHECK Semantic Search Engine" />
+                        <div class="overlay"><i class="ri-arrow-right-up-line"></i></div>
+                    </a>
+                    <div class="project__content">
+                        <h4>VIBECHECK – AI Semantic Search</h4>
+                        <p>Production-grade RAG pipeline with Dockerized C++ vector database (Endee), sentence-transformers for semantic similarity, and fault-tolerant exception handling.</p>
+                        <div class="project__tags">
+                            <span>Python</span><span>Gemini 1.5</span><span>RAG</span><span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project__card">
+                    <a href="https://github.com/krkunal1011" target="_blank" class="project__link">
+                        <img src="assets/project-3.png" alt="Smart Resume Analyzer" />
+                        <div class="overlay"><i class="ri-arrow-right-up-line"></i></div>
+                    </a>
+                    <div class="project__content">
+                        <h4>Smart Resume Analyzer</h4>
+                        <p>NLP backend using TF-IDF and cosine similarity to score resumes against job descriptions, with a modular FastAPI backend and structured skill/experience extraction from PDF/DOCX.</p>
+                        <div class="project__tags">
+                            <span>Python</span><span>FastAPI</span><span>NLP</span><span>TF-IDF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project__card">
                     <a href="https://github.com/krkunal1011/focusFlow" target="_blank" class="project__link">
-                        <img src="assets/project-1.png" alt="FocusFlow Dashboard" />
+                        <img src="assets/project-4.png" alt="FocusFlow Dashboard" />
                         <div class="overlay"><i class="ri-arrow-right-up-line"></i></div>
                     </a>
                     <div class="project__content">
                         <h4>FocusFlow</h4>
                         <p>Personal productivity dashboard with to-do list, calendar, and Pomodoro timer.</p>
+                        <div class="project__tags">
+                            <span>React</span><span>JavaScript</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project__card">
                     <a href="https://github.com/krkunal1011/ExpensifyX" target="_blank" class="project__link">
-                        <img src="assets/project-2.png" alt="ExpensifyX App" />
+                        <img src="assets/project-5.png" alt="ExpensifyX App" />
                         <div class="overlay"><i class="ri-arrow-right-up-line"></i></div>
                     </a>
                     <div class="project__content">
                         <h4>ExpensifyX</h4>
                         <p>A React-based expense tracking dashboard to manage daily spending and monitor monthly charts.</p>
-                    </div>
-                </div>
-
-                <div class="project__card">
-                    <a href="https://github.com/krkunal1011/Speechify" target="_blank" class="project__link">
-                        <img src="assets/project-3.png" alt="Speechify Interface" />
-                        <div class="overlay"><i class="ri-arrow-right-up-line"></i></div>
-                    </a>
-                    <div class="project__content">
-                        <h4>Speechify</h4>
-                        <p>A text-to-speech converter built with HTML, CSS, and JavaScript.</p>
-                    </div>
-                </div>
-
-                <div class="project__card">
-                    <a href="https://github.com/krkunal1011/Pdf--To-Audio" target="_blank" class="project__link">
-                        <img src="assets/project-4.png" alt="PDF to Audio Converter" />
-                        <div class="overlay"><i class="ri-arrow-right-up-line"></i></div>
-                    </a>
-                    <div class="project__content">
-                        <h4>Pdf-To-Audio</h4>
-                        <p>Lightweight application that converts text from PDF files into audio for accessibility.</p>
+                        <div class="project__tags">
+                            <span>React</span><span>JavaScript</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project__card">
                     <a href="#" class="project__link">
-                        <img src="assets/project-5.png" alt="ML Project Placeholder" />
+                        <img src="assets/project-6.png" alt="ML Project Placeholder" />
                         <div class="badge">Coming Soon</div>
                     </a>
                     <div class="project__content">
                         <h4>Smart Prediction Model</h4>
                         <p>A Machine Learning project focused on predictive analytics (In Development).</p>
-                    </div>
-                </div>
-
-                <div class="project__card">
-                    <a href="#" class="project__link">
-                        <img src="assets/project-6.png" alt="Nike Clone Placeholder" />
-                        <div class="badge">Coming Soon</div>
-                    </a>
-                    <div class="project__content">
-                        <h4>Nike Store Clone</h4>
-                        <p>A fully responsive e-commerce UI clone of the official Nike website (In Development).</p>
+                        <div class="project__tags">
+                            <span>Python</span><span>ML</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,16 +252,61 @@
                 </div>
             </div>
 
-            <form class="footer__form" action="https://formspree.io/f/xpqzbpak" method="POST">
+            <form class="footer__form" id="contactForm">
+                <input type="hidden" name="access_key" value="64899296-68b9-420a-914e-7ad7e38c12e6" />
+                <input type="hidden" name="subject" value="New message from Portfolio" />
+                <input type="hidden" name="from_name" value="Kunal's Portfolio" />
+
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email Address" required />
                 <input type="text" name="phone" placeholder="Your Phone Number" />
                 <textarea cols="30" rows="10" name="message" placeholder="Your Idea" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <button type="submit" class="btn" id="submitBtn">Send Message</button>
+                <p id="formStatus" style="margin-top:1rem; font-size:0.9rem; display:none;"></p>
             </form>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: json
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    status.style.color = '#4ade80';
+                    status.textContent = '✅ Message sent! I\'ll get back to you soon.';
+                    form.reset();
+                } else {
+                    status.style.color = '#f87171';
+                    status.textContent = '❌ Something went wrong. Please try again.';
+                }
+            } catch (err) {
+                status.style.color = '#f87171';
+                status.textContent = '❌ Network error. Please try again.';
+            }
+
+            status.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        });
+    </script>
 </body>
 </html>
